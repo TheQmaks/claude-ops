@@ -1,0 +1,4 @@
+# Keep shell scripts and Python hooks LF so they run on Linux/macOS regardless of
+# the committer's platform (a CRLF shebang breaks bash).
+*.sh text eol=lf
+*.py text eol=lf

@@ -1,0 +1,10 @@
+{
+  "name": "claude-ops",
+  "description": "Durable Notion system-of-record for Claude Code: logs significant work (research, repo evals, builds, decisions) to four Notion databases, nudges you to log before a meaningful session ends, and recalls past decisions in future sessions.",
+  "version": "1.0.0",
+  "author": { "name": "Anatoliy" },
+  "homepage": "https://github.com/TheQmaks/claude-ops",
+  "repository": "https://github.com/TheQmaks/claude-ops",
+  "license": "MIT",
+  "keywords": ["notion", "logging", "memory", "ops", "recall", "system-of-record"]
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "theqmaks-claude-ops",
+  "owner": { "name": "Anatoliy", "email": "anatoliyfeed@gmail.com" },
+  "metadata": {
+    "description": "Claude Ops — durable Notion logging, recall, and enforcement for Claude Code"
+  },
+  "plugins": [
+    {
+      "name": "claude-ops",
+      "source": "./",
+      "description": "Durable Notion system-of-record: log significant work, get nudged to log before ending a meaningful session, and recall past decisions/verdicts in future sessions.",
+      "version": "1.0.0",
+      "author": { "name": "Anatoliy" },
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": ["notion", "logging", "memory", "ops", "recall"]
+    }
+  ]
+}
