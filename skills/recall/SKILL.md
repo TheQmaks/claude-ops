@@ -26,7 +26,9 @@ discovery; and never assert "nothing was recorded" until a structured query has 
 2. **Query the relevant data source(s) with filters** (not a workspace search). Map the query:
    - decisions / "what did we do" / "last time" → **Session Log** (filter/sort by Date, title)
    - ongoing work / goals / status → **Projects** (filter by Status / Name)
-   - "did we evaluate <repo>" / "is <tool> worth it" → **Repo Evaluations** (filter by Repo / Verdict)
+   - "did we evaluate <repo>" / "is <tool> worth it" → **Repo Evaluations** (filter by Repo / Verdict;
+     prefer `Status = Current` and the most recent `Date` — surface a `Superseded` verdict only to
+     note that an older evaluation was revised)
    - "do we have" / "did we install" / "what tools" → **Capabilities** (filter by Capability / Type)
    Use the Notion data-source query (API version 2025-09-03: query the data source by its id with
    a property filter). Native `notion-search` is a fallback only when the query is fuzzy and not

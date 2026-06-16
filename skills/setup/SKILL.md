@@ -29,7 +29,9 @@ then re-run `/claude-ops:setup`.
    - **Projects** — `Name` (title), `Status` (select: Active / Paused / Done), `Domain`,
      `Started` (date), `Summary`, `Key artifacts`, `Next steps`
    - **Repo Evaluations** — `Repo` (title), `Verdict` (select: ADOPT / CHERRY-PICK / SKIP),
-     `Category` (select), `Why`, `Stars / inflation`, `Install method`, `Date` (date), `Link` (url)
+     `Status` (select: Current / Superseded), `Category` (select), `Why`, `Stars / inflation`,
+     `Install method`, `Date` (date), `Link` (url) — `Status` lets a later re-evaluation supersede
+     an old verdict instead of contradicting it.
    - **Capabilities** — `Capability` (title), `Type` (select: skill / MCP / CLI tool / plugin / policy),
      `Status` (select: Active / Pending), `How it works`, `Location / command`,
      `Notes / cautions`, `Date` (date)

@@ -93,9 +93,11 @@ def main():
         reason = (
             "This session looks significant, but nothing was logged to Claude Ops (Notion). "
             "Before finishing, create a Session Log entry with your Notion MCP create-pages "
-            f"tool (data source {session_log}) — briefly: what we did, decisions, outcome. "
-            "If there were repo verdicts or new capabilities, add them to Repo Evaluations / "
-            "Capabilities too. If the work was trivial, say so in one line and finish."
+            f"tool (data source {session_log}) containing: what we did, the substantive "
+            "decisions (and why), and the outcome. A stub or status-only entry (e.g. 'worked "
+            "on the project') does not satisfy this — capture the detail a future session would "
+            "need. If there were repo verdicts or new capabilities, add them to Repo Evaluations "
+            "/ Capabilities too. If the work was genuinely trivial, say so in one line and finish."
         )
         print(json.dumps({"decision": "block", "reason": reason}))
     return 0
