@@ -78,6 +78,25 @@ The four databases:
   per-session marker and `stop_hook_active` — it can't loop, and any failure exits 0.
 - Thresholds live in `~/.claude/claude-ops.json` under `thresholds`.
 
+## Roadmap / deliberately deferred
+
+These were evaluated and intentionally left out to keep the plugin a lightweight,
+hook-only system. Each is viable later if a real need shows up:
+
+- **Autonomous background summarizer** — auto-write the Session Log at session end without
+  the agent, claude-mem style. Needs a background worker + its own API key; out of scope for
+  a hook-only plugin. (Today the Stop hook delegates the summary to the agent, which has the
+  Notion tools.)
+- **Local hybrid (BM25 + embedding) index** — would improve recall accuracy/latency, but only
+  worth the sync pipeline + embeddings if structured-query recall is measurably missing results.
+  Not yet measured, so not built (YAGNI). Benchmark recall@k first.
+- **Recent-entries index in the SessionStart reminder** — inject titles of the latest records so
+  the model knows what exists. The hook is plain Python with no Notion access; doing this would
+  require a Notion token inside the hook (extra secret, per-start latency, rate limits). `/recall`
+  covers "what exists" on demand instead.
+
+Background and the 5-source research these decisions rest on are summarized in the commit history.
+
 ## License
 
 MIT.
